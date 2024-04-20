@@ -18,7 +18,7 @@ resource "aws_s3_object" "index" {
   ]
   bucket                 = aws_s3_bucket.index_website.bucket
   key                    = "index.html"
-  source                 = "./index.html"
+  source                 = "./website/index.html"
   server_side_encryption = "AES256"
 
   content_type = "text/html"
