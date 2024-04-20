@@ -6,7 +6,7 @@ variable "profile" {
 
 ## Create string variable for storing AWS credentials path
 variable "credential_path" {
-  description = "Path to aws credential file. Usullay looks like this: \"/Users/{Username}/.aws/credentials.txt\""
+  description = "Path to aws credential file. It must not contain any quotation marks, remove them if needed. Path should look like this: C:/Users/{Username}/.aws/credentials.txt"
   type        = string
 }
 
