@@ -13,7 +13,7 @@ Paste it into the "website" folder. Make sure that you include all the file exte
    Clone the directory from GitHub using the Git Bash.
 Therefore navigate to directory you want to clone the project at and enter:
 ````cmd
-git clone https://github.com/l-lattermann/AWS-static-website-with-Terraform.git
+git clone https://github.com/l-lattermann/Static-website-with-AWS-and-Terraform.git
 ````
 
 Or download the .zip file from GitHub.
