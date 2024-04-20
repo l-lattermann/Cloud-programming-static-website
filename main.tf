@@ -122,7 +122,7 @@ resource "aws_cloudfront_distribution" "static_website" {
 
 ## Create Origin Access Control 
 resource "aws_cloudfront_origin_access_control" "static_website" {
-  name                              = "OAC-S3"
+  name                              = "OAC-for-${var.bucket_name_user_input}"
   description                       = "OAC-S3-policy"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
