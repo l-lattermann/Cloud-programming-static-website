@@ -6,7 +6,7 @@ variable "profile" {
 
 ## Create string variable for storing AWS credentials path
 variable "credential_path" {
-  description = "Path to aws credential file. Usullay looks like this: /Users/{Username}/.aws/credentials.txt"
+  description = "Path to aws credential file. Usullay looks like this: \"/Users/{Username}/.aws/credentials.txt\""
   type        = string
 }
 
@@ -43,10 +43,4 @@ variable "bucket_name_user_input" {
     condition     = can(regex("^[a-z0-9-]+$", var.bucket_name_user_input))
     error_message = "validating S3 Bucket name: only lowercase alphanumeric characters and hyphens allowed"
   }
-}
-
-## Create string variable for storing bucket name coupled with uuid
-variable "bucket_name" {
-  description = "The name of the S3 bucket. Only lowercase alphanumeric characters and hyphens are allowed."
-  type = string
 }
