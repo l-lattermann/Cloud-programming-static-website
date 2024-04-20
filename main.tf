@@ -20,18 +20,7 @@ resource "aws_s3_object" "content" {
   for_each = fileset("/website/", "**/*")
   key = each.value
   source = "./website/${each.value}"
-  content_type = lookup({
-    ".html" = "text/html",
-    ".css"  = "text/css",
-    ".js"   = "application/javascript",
-    ".jpg"  = "image/jpeg",
-    ".jpeg" = "image/jpeg",
-    ".png"  = "image/png",
-    ".gif"  = "image/gif",
-    ".svg"  = "image/svg+xml",
-    ".pdf"  = "application/pdf",
-    ".txt"  = "text/plain",
-  }, lower(regex("[.][^.]+$", each.value)), "application/octet-stream") 
+  content_type = lookup(var.MIME_types, lower(regex("[.][^.]+$", each.value)), "application/octet-stream") 
   etag = filemd5("./website/${each.value}")
   server_side_encryption = "AES256"
 }

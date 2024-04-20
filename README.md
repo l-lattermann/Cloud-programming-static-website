@@ -1,5 +1,9 @@
 # IU - Cloud programming project
-This is a litte project written in Terraform, that deployes an AWS S3-Bucket with a AWS Cloudfront distribution and host a html template in the bucket. It can easily be used to host a more complex static website.
+This is a litte project written in Terraform, that deployes an AWS S3-Bucket with a AWS Cloudfront distribution and host a html template in the bucket. It can easily be used to host a more complex static website. 
+
+#### If you want to use your own website:
+Paste it into the "website" folder. Make sure that you include all the file extentions used in your project in the lookup table in the "mime_type.tf" file. Otherwise you might run into issues displaying the content correctly.
+
 ## Usage
 
 **Make sure to download and install [Terraform](https://developer.hashicorp.com/terraform/downloads)**
@@ -64,7 +68,7 @@ Linux/MacOS:
    ````
    Terrafrom will add an UUID at the end of the bucket name to ensure it is unique.
    
-7. Terraform will ask you to enter the path to your credentials.txt file. Paste the path you copied earlier, i.e.:
+7. Terraform will ask you to enter the path to your credentials.txt file. Paste the path you copied earlier, make sure to remove any quotation marks, i.e.:
 
    Windows:
    ````cmd
