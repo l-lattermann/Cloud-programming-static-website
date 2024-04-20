@@ -11,7 +11,7 @@ Paste it into the "website" folder. Make sure that you include all the file exte
 **Clone or Copy the Module**
 
    Clone the directory from GitHub using the Git Bash.
-Therefor navigate to directory you want to clone the project at and enter:
+Therefore navigate to directory you want to clone the project at and enter:
 ````cmd
 git clone https://github.com/l-lattermann/AWS-static-website-with-Terraform.git
 ````
