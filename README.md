@@ -90,3 +90,5 @@ Linux/MacOS:
    Enter the user name.
 
 9. Terraform should now have all information needed to build the project into your AWS. If any of the inputs were faulty you will be prompted an error message.
+
+10. When the build is finished Terraform will prompt a link to the website created.
