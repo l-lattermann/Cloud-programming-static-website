@@ -17,11 +17,11 @@ resource "aws_s3_object" "index" {
     aws_s3_bucket.index_website
   ]
   bucket                 = aws_s3_bucket.index_website.bucket
-  key                    = "index.html"
-  source                 = "./website/index.html"
-  server_side_encryption = "AES256"
-
-  content_type = "text/html"
+  for_each = fileset("/website/", "**/*")
+  key = each.value
+  source = "./website/${each.value}"
+  content_type = filemd5("./website/${each.value}")
+  etag = filemd5("./website/${each.value}")
 }
 
 ## Create bucket policy for Couldfront access
